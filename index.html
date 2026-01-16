@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Meta Pixel Code - 脸书像素代码 已置顶添加，统计最精准 -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1521922445701292');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1521922445701292&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acciones Españolas | Mercado Bursátil de España</title>
@@ -23,13 +41,15 @@
             --color-texto: #1E293B;
             --color-texto-claro: #64748B;
             --color-whatsapp: #25D366; /* Color oficial WhatsApp */
+            --color-whatsapp-hover: #12b858; /* Color hover WhatsApp */
         }
 
         body {
             background-color: var(--color-claro);
             color: var(--color-texto);
             line-height: 1.6;
-            padding-bottom: 80px; /* 预留按钮空间，避免遮挡底部内容 */
+            padding-bottom: 120px; /* 预留3个按钮空间，避免遮挡底部内容 */
+            padding-left: 20px;
         }
 
         .contenedor {
@@ -212,11 +232,9 @@
             font-size: 0.95rem;
         }
 
-        /* ✅ 新增：WhatsApp 悬浮联系按钮 核心样式 */
+        /* ✅ 3个独立的 WhatsApp 悬浮联系按钮 全部样式 - 互不冲突 */
         .btn-whatsapp {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
             background-color: var(--color-whatsapp);
             color: white;
             padding: 15px 20px;
@@ -232,12 +250,27 @@
             transition: all 0.3s ease;
         }
         .btn-whatsapp:hover {
-            background-color: #12b858;
+            background-color: var(--color-whatsapp-hover);
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
+        /* 按钮1：左下角【主咨询】- 固定位置 */
+        .btn-whatsapp-1 {
+            bottom: 25px;
+            left: 25px;
+        }
+        /* 按钮2：右下角【行情咨询】- 固定位置 */
+        .btn-whatsapp-2 {
+            bottom: 25px;
+            right: 25px;
+        }
+        /* 按钮3：右下偏上【紧急咨询】- 固定位置，不遮挡按钮2 */
+        .btn-whatsapp-3 {
+            bottom: 95px;
+            right: 25px;
+        }
 
-        /* Responsividad - Adaptable móvil */
+        /* Responsividad - 完美适配手机移动端 */
         @media (max-width: 768px) {
             .cabecera-contenido {
                 flex-direction: column;
@@ -254,11 +287,12 @@
                 font-size: 2rem;
             }
             .btn-whatsapp {
-                padding: 12px 18px;
-                font-size: 0.9rem;
-                bottom: 20px;
-                right: 20px;
+                padding: 12px 16px;
+                font-size: 0.85rem;
             }
+            .btn-whatsapp-1 { bottom: 20px; left: 20px; }
+            .btn-whatsapp-2 { bottom: 20px; right: 20px; }
+            .btn-whatsapp-3 { bottom: 85px; right: 20px; }
         }
     </style>
 </head>
@@ -361,9 +395,18 @@
         </div>
     </footer>
 
-    <!-- ✅ 核心新增：WhatsApp 跳转联系按钮 (复制即用，改号码即可) -->
-    <a href="https://wa.me/34666888999" target="_blank" class="btn-whatsapp">
-        📞 Contáctanos por WhatsApp
+    <!-- ✅ 3个独立的 WhatsApp 跳转联系按钮【全部可独立修改号码+文案】 -->
+    <!-- 按钮1 左下角 - 主咨询 -->
+    <a href="https://wa.me/34666888999" target="_blank" class="btn-whatsapp btn-whatsapp-1">
+        📞 Contáctanos Ahora
+    </a>
+    <!-- 按钮2 右下角 - 股票行情咨询 -->
+    <a href="https://wa.me/34666777888" target="_blank" class="btn-whatsapp btn-whatsapp-2">
+        📈 Consulta Acciones
+    </a>
+    <!-- 按钮3 右下偏上 - 紧急咨询 -->
+    <a href="https://wa.me/34666111222" target="_blank" class="btn-whatsapp btn-whatsapp-3">
+        ⚡ Atención Inmediata
     </a>
 
 </body>
