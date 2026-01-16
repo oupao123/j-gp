@@ -348,11 +348,16 @@
         </div>
     </footer>
 
-    <!-- ✅ 按钮点击埋点JS代码 已集成+自动触发脸书像素Contact事件 -->
+    <!-- ✅ 按钮点击跳转【+85265621852】+ 西班牙语打招呼话术 + 脸书像素Contact事件统计 -->
     <script type="text/javascript">
         document.getElementById('contactButton').addEventListener('click', function() {
-            // 点击按钮自动统计脸书转化事件，无需修改
+            // 触发脸书像素统计事件
             fbq('track', 'Contact');
+            // 跳转指定WhatsApp号码 + 预设西班牙语打招呼话术
+            const telefono = '85265621852';
+            const mensaje = 'Quiero obtener información sobre acciones de alto potencial, ¿cómo puedo unirme al grupo?';
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
         }, false);
     </script>
 
