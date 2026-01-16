@@ -348,14 +348,12 @@
         </div>
     </footer>
 
-    <!-- ✅ 按钮点击跳转【+85265621852】+ 西班牙语打招呼话术 + 脸书像素Contact事件统计 -->
+    <!-- ✅ 核心配置：跳转+85265621852 + 你指定的西班牙语完整话术 + 脸书像素统计 -->
     <script type="text/javascript">
         document.getElementById('contactButton').addEventListener('click', function() {
-            // 触发脸书像素统计事件
             fbq('track', 'Contact');
-            // 跳转指定WhatsApp号码 + 预设西班牙语打招呼话术
             const telefono = '85265621852';
-            const mensaje = 'Quiero obtener información sobre acciones de alto potencial, ¿cómo puedo unirme al grupo?';
+            const mensaje = 'Me gustaría conseguir acciones de calidad. ¿Cómo puedo unirme al chat grupal?';
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }, false);
