@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Meta Pixel Code - 脸书像素代码 置顶添加，统计最精准 -->
+    <!-- Meta Pixel Code - 脸书像素 置顶精准统计 -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -33,7 +33,7 @@
         }
 
         :root {
-            --color-principal: #0F4C81; /* Azul profesional - color financiero español */
+            --color-principal: #0F4C81; /* Azul profesional financiero español */
             --color-exito: #27AE60;
             --color-alerta: #E74C3C;
             --color-claro: #F8FAFC;
@@ -41,14 +41,14 @@
             --color-texto: #1E293B;
             --color-texto-claro: #64748B;
             --color-whatsapp: #25D366; /* Color oficial WhatsApp */
-            --color-whatsapp-hover: #12b858; /* Color hover WhatsApp */
+            --color-whatsapp-hover: #12b858;
         }
 
         body {
             background-color: var(--color-claro);
             color: var(--color-texto);
             line-height: 1.6;
-            padding-bottom: 120px; /* 预留3个按钮空间，避免遮挡底部内容 */
+            padding-bottom: 120px;
             padding-left: 20px;
         }
 
@@ -89,7 +89,7 @@
             color: var(--color-principal);
         }
 
-        /* Hero Section - Sección principal */
+        /* Hero Section */
         .hero {
             padding: 4rem 0;
             text-align: center;
@@ -197,12 +197,12 @@
             margin-bottom: 1rem;
         }
 
-        /* ✅ 新增：联系按钮 专属样式 - 匹配页面风格 醒目不突兀 */
+        /* ✅ 按钮样式 西班牙语文案适配 完美居中 无换行 */
         #contactButton {
             display: block;
-            width: 220px;
-            height: 50px;
-            line-height: 50px;
+            width: 280px;
+            height: 55px;
+            line-height: 55px;
             margin: 0 auto 3rem;
             background-color: var(--color-principal);
             color: white;
@@ -255,7 +255,7 @@
             font-size: 0.95rem;
         }
 
-        /* ✅ 3个独立的 WhatsApp 悬浮联系按钮 全部样式 - 互不冲突 */
+        /* ✅ 3个独立悬浮 WhatsApp 按钮 - 无冲突 西语文案 */
         .btn-whatsapp {
             position: fixed;
             background-color: var(--color-whatsapp);
@@ -277,48 +277,18 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
-        /* 按钮1：左下角【主咨询】- 固定位置 */
-        .btn-whatsapp-1 {
-            bottom: 25px;
-            left: 25px;
-        }
-        /* 按钮2：右下角【行情咨询】- 固定位置 */
-        .btn-whatsapp-2 {
-            bottom: 25px;
-            right: 25px;
-        }
-        /* 按钮3：右下偏上【紧急咨询】- 固定位置，不遮挡按钮2 */
-        .btn-whatsapp-3 {
-            bottom: 95px;
-            right: 25px;
-        }
+        .btn-whatsapp-1 { bottom: 25px; left: 25px; }
+        .btn-whatsapp-2 { bottom: 25px; right: 25px; }
+        .btn-whatsapp-3 { bottom: 95px; right: 25px; }
 
-        /* Responsividad - 完美适配手机移动端 */
+        /* Responsividad - 完美适配 móvil y escritorio */
         @media (max-width: 768px) {
-            .cabecera-contenido {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .menu a {
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .ibex-precio {
-                font-size: 2rem;
-            }
-            #contactButton {
-                width: 180px;
-                height: 45px;
-                line-height: 45px;
-                font-size: 1rem;
-            }
-            .btn-whatsapp {
-                padding: 12px 16px;
-                font-size: 0.85rem;
-            }
+            .cabecera-contenido { flex-direction: column; gap: 1rem; }
+            .menu a { margin-left: 1rem; margin-right: 1rem; }
+            .hero h1 { font-size: 2rem; }
+            .ibex-precio { font-size: 2rem; }
+            #contactButton { width: 220px; height: 50px; line-height: 50px; font-size: 0.95rem; }
+            .btn-whatsapp { padding: 12px 16px; font-size: 0.85rem; }
             .btn-whatsapp-1 { bottom: 20px; left: 20px; }
             .btn-whatsapp-2 { bottom: 20px; right: 20px; }
             .btn-whatsapp-3 { bottom: 85px; right: 20px; }
@@ -326,7 +296,6 @@
     </style>
 </head>
 <body>
-    <!-- Cabecera / Navegación -->
     <header>
         <div class="contenedor cabecera-contenido">
             <a href="#" class="logo">Bolsa España</a>
@@ -339,7 +308,6 @@
         </div>
     </header>
 
-    <!-- Sección Principal Hero -->
     <section class="hero">
         <div class="contenedor">
             <h1>Acciones Españolas & Mercado Bursátil</h1>
@@ -348,7 +316,6 @@
     </section>
 
     <main class="contenedor">
-        <!-- Destaque IBEX 35 -->
         <section class="ibex-destaque">
             <h2 class="ibex-titulo">IBEX 35 ®</h2>
             <div class="ibex-precio">9.247,85 €</div>
@@ -356,53 +323,41 @@
             <p style="margin-top:1rem; opacity:0.8;">Índice bursátil principal de España | Última actualización: Hoy, 16 Enero 2026</p>
         </section>
 
-        <!-- ✅ 核心新增：联系按钮 - 精准位置，醒目展示 -->
-        <button id="contactButton">联系</button>
+        <!-- ✅ 核心修改：西班牙语按钮文案【Contáctame por WhatsApp】= 请联系我的WhatsApp -->
+        <button id="contactButton">Contáctame por WhatsApp</button>
 
-        <!-- Tarjetas de Acciones Españolas Principales -->
         <h2 class="titulo-seccion">Acciones Españolas Líderes</h2>
         <section class="grid-acciones">
-            <!-- Acción 1 -->
             <div class="tarjeta-accion">
                 <h3 class="nombre-accion">Banco Santander</h3>
                 <span class="simbolo">SAN.MC</span>
                 <div class="precio">3,24 €</div>
                 <div class="variacion-positiva">↑ +1,27% ( +0,04 € )</div>
             </div>
-
-            <!-- Acción 2 -->
             <div class="tarjeta-accion">
                 <h3 class="nombre-accion">Telefónica</h3>
                 <span class="simbolo">TEF.MC</span>
                 <div class="precio">3,98 €</div>
                 <div class="variacion-positiva">↑ +0,51% ( +0,02 € )</div>
             </div>
-
-            <!-- Acción 3 -->
             <div class="tarjeta-accion">
                 <h3 class="nombre-accion">Inditex</h3>
                 <span class="simbolo">ITX.MC</span>
                 <div class="precio">32,65 €</div>
                 <div class="variacion-negativa">↓ -0,37% ( -0,12 € )</div>
             </div>
-
-            <!-- Acción 4 -->
             <div class="tarjeta-accion">
                 <h3 class="nombre-accion">BBVA</h3>
                 <span class="simbolo">BBVA.MC</span>
                 <div class="precio">5,12 €</div>
                 <div class="variacion-positiva">↑ +0,99% ( +0,05 € )</div>
             </div>
-
-            <!-- Acción 5 -->
             <div class="tarjeta-accion">
                 <h3 class="nombre-accion">Repsol</h3>
                 <span class="simbolo">REP.MC</span>
                 <div class="precio">12,87 €</div>
                 <div class="variacion-negativa">↓ -0,62% ( -0,08 € )</div>
             </div>
-
-            <!-- Acción 6 -->
             <div class="tarjeta-accion">
                 <h3 class="nombre-accion">Ferrovial</h3>
                 <span class="simbolo">FER.MC</span>
@@ -411,7 +366,6 @@
             </div>
         </section>
 
-        <!-- Información del Mercado Español -->
         <section class="info-bolsa">
             <h3>Acerca del Mercado Bursátil Español</h3>
             <p>El mercado de acciones español está centrado en el IBEX 35, el índice que agrupa a las 35 empresas con mayor capitalización y liquidez de la Bolsa de Madrid.</p>
@@ -420,29 +374,22 @@
         </section>
     </main>
 
-    <!-- Pie de Página -->
     <footer>
         <div class="contenedor">
             <p class="footer-texto">Bolsa España © 2026 | Todas las cotizaciones son informativas y no constituyen asesoramiento financiero.</p>
         </div>
     </footer>
 
-    <!-- ✅ 3个独立的 WhatsApp 跳转联系按钮【全部可独立修改号码+文案】 -->
-    <a href="https://wa.me/34666888999" target="_blank" class="btn-whatsapp btn-whatsapp-1">
-        📞 Contáctanos Ahora
-    </a>
-    <a href="https://wa.me/34666777888" target="_blank" class="btn-whatsapp btn-whatsapp-2">
-        📈 Consulta Acciones
-    </a>
-    <a href="https://wa.me/34666111222" target="_blank" class="btn-whatsapp btn-whatsapp-3">
-        ⚡ Atención Inmediata
-    </a>
+    <!-- ✅ 3个独立悬浮WhatsApp按钮 可修改不同号码 -->
+    <a href="https://wa.me/34666888999" target="_blank" class="btn-whatsapp btn-whatsapp-1">📞 Contáctanos Ahora</a>
+    <a href="https://wa.me/34666777888" target="_blank" class="btn-whatsapp btn-whatsapp-2">📈 Consulta Acciones</a>
+    <a href="https://wa.me/34666111222" target="_blank" class="btn-whatsapp btn-whatsapp-3">⚡ Atención Inmediata</a>
 
-    <!-- ✅ 核心新增：你指定的 联系按钮点击事件JS代码 完整集成 -->
+    <!-- ✅ 按钮点击埋点JS代码 完整集成 -->
     <script type="text/javascript">
         document.getElementById('contactButton').addEventListener('click', function() {
-            // insert_event_code_here;  ← 在这里粘贴你的统计事件代码即可，无需修改其他内容
-            // 示例：如果是脸书像素事件，可粘贴 fbq('track', 'Contact'); 即可统计点击量
+            // 在这里粘贴你的统计代码，例：脸书像素事件 → fbq('track', 'Contact');
+            fbq('track', 'Contact'); // 推荐添加：统计按钮点击转化事件
         }, false);
     </script>
 
