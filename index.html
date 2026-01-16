@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Meta Pixel Code - 脸书像素代码 已置顶添加，统计最精准 -->
+    <!-- Meta Pixel Code - 脸书像素代码 置顶添加，统计最精准 -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -181,7 +181,7 @@
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             border: 1px solid var(--color-gris);
         }
 
@@ -195,6 +195,29 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+        }
+
+        /* ✅ 新增：联系按钮 专属样式 - 匹配页面风格 醒目不突兀 */
+        #contactButton {
+            display: block;
+            width: 220px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto 3rem;
+            background-color: var(--color-principal);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(15,76,129,0.2);
+            transition: all 0.3s ease;
+        }
+        #contactButton:hover {
+            background-color: #156bb3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(15,76,129,0.3);
         }
 
         /* Sección de Información */
@@ -286,6 +309,12 @@
             .ibex-precio {
                 font-size: 2rem;
             }
+            #contactButton {
+                width: 180px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 1rem;
+            }
             .btn-whatsapp {
                 padding: 12px 16px;
                 font-size: 0.85rem;
@@ -326,6 +355,9 @@
             <div class="variacion-positiva">↑ +0,84% ( +77,52 pts )</div>
             <p style="margin-top:1rem; opacity:0.8;">Índice bursátil principal de España | Última actualización: Hoy, 16 Enero 2026</p>
         </section>
+
+        <!-- ✅ 核心新增：联系按钮 - 精准位置，醒目展示 -->
+        <button id="contactButton">联系</button>
 
         <!-- Tarjetas de Acciones Españolas Principales -->
         <h2 class="titulo-seccion">Acciones Españolas Líderes</h2>
@@ -396,18 +428,23 @@
     </footer>
 
     <!-- ✅ 3个独立的 WhatsApp 跳转联系按钮【全部可独立修改号码+文案】 -->
-    <!-- 按钮1 左下角 - 主咨询 -->
     <a href="https://wa.me/34666888999" target="_blank" class="btn-whatsapp btn-whatsapp-1">
         📞 Contáctanos Ahora
     </a>
-    <!-- 按钮2 右下角 - 股票行情咨询 -->
     <a href="https://wa.me/34666777888" target="_blank" class="btn-whatsapp btn-whatsapp-2">
         📈 Consulta Acciones
     </a>
-    <!-- 按钮3 右下偏上 - 紧急咨询 -->
     <a href="https://wa.me/34666111222" target="_blank" class="btn-whatsapp btn-whatsapp-3">
         ⚡ Atención Inmediata
     </a>
+
+    <!-- ✅ 核心新增：你指定的 联系按钮点击事件JS代码 完整集成 -->
+    <script type="text/javascript">
+        document.getElementById('contactButton').addEventListener('click', function() {
+            // insert_event_code_here;  ← 在这里粘贴你的统计事件代码即可，无需修改其他内容
+            // 示例：如果是脸书像素事件，可粘贴 fbq('track', 'Contact'); 即可统计点击量
+        }, false);
+    </script>
 
 </body>
 </html>
