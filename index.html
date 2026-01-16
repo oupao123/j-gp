@@ -1,363 +1,491 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Meta Pixel Code - 脸书像素 置顶精准统计 -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1521922445701292');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1521922445701292&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acciones Españolas | Mercado Bursátil de España</title>
-    <meta name="description" content="Información actualizada del mercado de acciones españolas, cotizaciones y tendencias del IBEX 35 y empresas líderes">
-    <meta name="keywords" content="acciones españolas, IBEX 35, bolsa española, cotizaciones bursátiles, mercado de valores España">
+    <title>Invertir en Acciones Españolas | Mercado Bursátil Español</title>
+    <meta name="description" content="Invierta en el mercado de acciones español con facilidad. Accede a IBEX 35, acciones de empresas líderes y oportunidades de inversión rentables.">
+    <meta name="keywords" content="acciones españolas, ibex 35, mercado bursátil español, invertir en acciones, bolsa de madrid">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
         }
 
         :root {
-            --color-principal: #0F4C81; /* Azul profesional financiero español */
-            --color-exito: #27AE60;
-            --color-alerta: #E74C3C;
-            --color-claro: #F8FAFC;
-            --color-gris: #E2E8F0;
-            --color-texto: #1E293B;
-            --color-texto-claro: #64748B;
+            --azul-oscuro: #0F3460;
+            --azul-medio: #16548C;
+            --dorado: #E6B325;
+            --gris-claro: #F5F7FA;
+            --gris-texto: #333333;
+            --blanco: #FFFFFF;
+            --rojo-baja: #E74C3C;
+            --verde-alza: #27AE60;
+            --verde-whatsapp: #25D366;
         }
 
         body {
-            background-color: var(--color-claro);
-            color: var(--color-texto);
+            color: var(--gris-texto);
             line-height: 1.6;
-            padding-bottom: 50px;
-            padding-left: 20px;
+            background-color: var(--gris-claro);
         }
 
-        .contenedor {
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Cabecera */
+        /* Navegación Superior */
         header {
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            padding: 1.2rem 0;
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .cabecera-contenido {
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-principal);
-            text-decoration: none;
+            font-weight: bold;
+            color: var(--dorado);
         }
-        .menu a {
-            color: var(--color-texto);
-            text-decoration: none;
-            margin-left: 2rem;
+        .nav-links a {
+            margin-left: 25px;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
-        .menu a:hover {
-            color: var(--color-principal);
+        .nav-links a:hover {
+            color: var(--dorado);
         }
 
-        /* Hero Section */
+        /* Hero Section - Sección Principal */
         .hero {
-            padding: 4rem 0;
+            background: linear-gradient(rgba(15, 52, 96, 0.9), rgba(15, 52, 96, 0.8)), url('https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--blanco);
+            padding: 100px 0;
             text-align: center;
-            background: linear-gradient(120deg, var(--color-principal) 0%, #156bb3 100%);
-            color: white;
-            margin-bottom: 3rem;
         }
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dorado);
         }
         .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--dorado);
+            color: var(--azul-oscuro);
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-weight: bold;
             font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d4a319;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* Tarjetas de Cotizaciones */
+        /* Botón WhatsApp Especial */
+        .btn-whatsapp {
+            background-color: var(--verde-whatsapp);
+            color: var(--blanco) !important;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Sección de Estadísticas del Mercado */
+        .mercado {
+            padding: 80px 0;
+            background-color: var(--blanco);
+        }
         .titulo-seccion {
             text-align: center;
-            font-size: 1.8rem;
-            color: var(--color-principal);
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-gris);
+            font-size: 2.2rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 50px;
+            position: relative;
         }
-
-        .grid-acciones {
+        .titulo-seccion::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: var(--dorado);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .indices {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
-
-        .tarjeta-accion {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid var(--color-principal);
-        }
-
-        .tarjeta-accion:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        .nombre-accion {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--color-principal);
-        }
-
-        .simbolo {
-            color: var(--color-texto-claro);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .precio {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-        }
-
-        .variacion-positiva {
-            color: var(--color-exito);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .variacion-negativa {
-            color: var(--color-alerta);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        /* IBEX 35 Destaque */
-        .ibex-destaque {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 2rem;
-            border: 1px solid var(--color-gris);
-        }
-
-        .ibex-titulo {
-            font-size: 2rem;
-            color: var(--color-principal);
-            margin-bottom: 1rem;
-        }
-
-        .ibex-precio {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        /* ✅ 核心按钮 西班牙语【Contáctame por WhatsApp】= 请联系我的WhatsApp */
-        #contactButton {
-            display: block;
-            width: 280px;
-            height: 55px;
-            line-height: 55px;
-            margin: 0 auto 3rem;
-            background-color: var(--color-principal);
-            color: white;
-            border: none;
+        .indice-card {
+            background-color: var(--gris-claro);
+            padding: 25px;
             border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .indice-card:hover {
+            transform: translateY(-5px);
+        }
+        .indice-card h3 {
+            color: var(--azul-medio);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .valor {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .alza {
+            color: var(--verde-alza);
+        }
+        .baja {
+            color: var(--rojo-baja);
+        }
+        .porcentaje {
             font-size: 1.1rem;
             font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 3px 10px rgba(15,76,129,0.2);
+        }
+
+        /* Acciones Españolas Destacadas */
+        .acciones-destacadas {
+            padding: 80px 0;
+            background-color: var(--gris-claro);
+        }
+        .acciones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .accion-card {
+            background-color: var(--blanco);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
-        #contactButton:hover {
-            background-color: #156bb3;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(15,76,129,0.3);
+        .accion-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .accion-header {
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accion-body {
+            padding: 20px;
+        }
+        .accion-precio {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        /* Sección de Información */
-        .info-bolsa {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-            margin-bottom: 4rem;
-            line-height: 1.8;
+        /* Ventajas de Invertir en Acciones Españolas */
+        .ventajas {
+            padding: 80px 0;
+            background-color: var(--blanco);
         }
-
-        .info-bolsa h3 {
-            color: var(--color-principal);
-            margin-bottom: 1rem;
+        .ventajas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .ventaja-card {
+            padding: 30px;
+            text-align: center;
+        }
+        .ventaja-card i {
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 20px;
+        }
+        .ventaja-card h3 {
+            color: var(--azul-oscuro);
+            margin-bottom: 15px;
             font-size: 1.4rem;
         }
 
-        .info-bolsa p {
-            color: var(--color-texto);
-            margin-bottom: 1rem;
-        }
-
-        /* Pie de página */
-        footer {
-            background-color: var(--color-principal);
-            color: white;
-            padding: 2rem 0;
+        /* Call to Action - CTA */
+        .cta {
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 80px 0;
             text-align: center;
-            margin-top: 2rem;
+        }
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
         }
 
-        .footer-texto {
-            opacity: 0.9;
-            font-size: 0.95rem;
+        /* Footer */
+        footer {
+            background-color: #08213d;
+            color: var(--blanco);
+            padding: 50px 0 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: var(--dorado);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a:hover {
+            color: var(--dorado);
+            transition: color 0.3s;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
         }
 
-        /* Responsividad - 完美适配 móvil y escritorio */
+        /* Responsive - Adaptación Móvil */
         @media (max-width: 768px) {
-            .cabecera-contenido { flex-direction: column; gap: 1rem; }
-            .menu a { margin-left: 1rem; margin-right: 1rem; }
-            .hero h1 { font-size: 2rem; }
-            .ibex-precio { font-size: 2rem; }
-            #contactButton { width: 220px; height: 50px; line-height: 50px; font-size: 0.95rem; }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .titulo-seccion {
+                font-size: 1.8rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .cta h2 {
+                font-size: 2rem;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Cabecera y Navegación -->
     <header>
-        <div class="contenedor cabecera-contenido">
-            <a href="#" class="logo">Bolsa España</a>
-            <nav class="menu">
-                <a href="#">Acciones</a>
-                <a href="#">IBEX 35</a>
-                <a href="#">Tendencias</a>
-                <a href="#">Mercado</a>
-            </nav>
+        <div class="container navbar">
+            <div class="logo">BolsaEspana®</div>
+            <div class="nav-links">
+                <a href="#mercado">Mercado</a>
+                <a href="#acciones">Acciones</a>
+                <a href="#ventajas">Ventajas</a>
+                <a href="#iniciar">Contacto</a>
+            </div>
         </div>
     </header>
 
+    <!-- Sección Principal (Hero) -->
     <section class="hero">
-        <div class="contenedor">
-            <h1>Acciones Españolas & Mercado Bursátil</h1>
-            <p>Cotizaciones actualizadas, datos en tiempo real y tendencias del mercado español. El mejor acceso al IBEX 35 y las empresas líderes de España.</p>
+        <div class="container">
+            <h1>Invierta en Acciones Españolas con Seguridad</h1>
+            <p>Accede al IBEX 35 y a las mejores empresas del mercado bursátil español. Obtén rentabilidades sostenibles y participa en el crecimiento económico de España.</p>
+            <a href="https://wa.me/85265621852?text=Me%20gustaría%20conseguir%20acciones%20de%20calidad.%20%BFCómo%20puedo%20unirme%20al%20chat%20grupal?" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Contacta por WhatsApp</a>
         </div>
     </section>
 
-    <main class="contenedor">
-        <section class="ibex-destaque">
-            <h2 class="ibex-titulo">IBEX 35 ®</h2>
-            <div class="ibex-precio">9.247,85 €</div>
-            <div class="variacion-positiva">↑ +0,84% ( +77,52 pts )</div>
-            <p style="margin-top:1rem; opacity:0.8;">Índice bursátil principal de España | Última actualización: Hoy, 16 Enero 2026</p>
-        </section>
+    <!-- Sección de Mercado Bursátil Español -->
+    <section class="mercado" id="mercado">
+        <div class="container">
+            <h2 class="titulo-seccion">Indicadores del Mercado Español</h2>
+            <div class="indices">
+                <div class="indice-card">
+                    <h3>IBEX 35</h3>
+                    <div class="valor">9.247,50</div>
+                    <div class="porcentaje alza"><i class="fas fa-arrow-up"></i> +0,87%</div>
+                    <p>Índice principal de Bolsa de Madrid</p>
+                </div>
+                <div class="indice-card">
+                    <h3>Mercado Continuo</h3>
+                    <div class="valor">+0,62%</div>
+                    <div class="porcentaje alza"><i class="fas fa-arrow-up"></i> Tendencia Alcista</div>
+                    <p>Promedio general del mercado</p>
+                </div>
+                <div class="indice-card">
+                    <h3>Volumen de Negociación</h3>
+                    <div class="valor">2.145 M€</div>
+                    <div class="porcentaje">Hoy</div>
+                    <p>Operaciones diarias en acciones</p>
+                </div>
+                <div class="indice-card">
+                    <h3>Euro / Dólar</h3>
+                    <div class="valor">1,0925</div>
+                    <div class="porcentaje baja"><i class="fas fa-arrow-down"></i> -0,12%</div>
+                    <p>Tipo de cambio oficial</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- ✅ 核心按钮 西班牙语：Contáctame por WhatsApp (请联系我的WhatsApp) -->
-        <button id="contactButton">Contáctame por WhatsApp</button>
+    <!-- Acciones Españolas Destacadas -->
+    <section class="acciones-destacadas" id="acciones">
+        <div class="container">
+            <h2 class="titulo-seccion">Acciones Españolas Destacadas</h2>
+            <div class="acciones-grid">
+                <div class="accion-card">
+                    <div class="accion-header">
+                        <h3>Telefónica, S.A.</h3>
+                        <span>TEF</span>
+                    </div>
+                    <div class="accion-body">
+                        <div class="accion-precio">3,92 €</div>
+                        <div class="porcentaje alza"><i class="fas fa-arrow-up"></i> +1,24%</div>
+                        <p>Empresa líder en telecomunicaciones en España y Latinoamérica</p>
+                    </div>
+                </div>
+                <div class="accion-card">
+                    <div class="accion-header">
+                        <h3>BBVA Banco Bilbao</h3>
+                        <span>BBVA</span>
+                    </div>
+                    <div class="accion-body">
+                        <div class="accion-precio">5,87 €</div>
+                        <div class="porcentaje alza"><i class="fas fa-arrow-up"></i> +0,95%</div>
+                        <p>Grupo bancario internacional con sede en Bilbao</p>
+                    </div>
+                </div>
+                <div class="accion-card">
+                    <div class="accion-header">
+                        <h3>Inditex, S.A.</h3>
+                        <span>ITX</span>
+                    </div>
+                    <div class="accion-body">
+                        <div class="accion-precio">32,15 €</div>
+                        <div class="porcentaje baja"><i class="fas fa-arrow-down"></i> -0,31%</div>
+                        <p>Grupo de moda líder mundial (Zara, Massimo Dutti)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2 class="titulo-seccion">Acciones Españolas Líderes</h2>
-        <section class="grid-acciones">
-            <div class="tarjeta-accion">
-                <h3 class="nombre-accion">Banco Santander</h3>
-                <span class="simbolo">SAN.MC</span>
-                <div class="precio">3,24 €</div>
-                <div class="variacion-positiva">↑ +1,27% ( +0,04 € )</div>
+    <!-- Ventajas de Invertir en Acciones Españolas -->
+    <section class="ventajas" id="ventajas">
+        <div class="container">
+            <h2 class="titulo-seccion">Por qué Invertir en Acciones Españolas</h2>
+            <div class="ventajas-grid">
+                <div class="ventaja-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Estabilidad Económica</h3>
+                    <p>El mercado español cuenta con empresas sólidas con trayectoria y presencia internacional, garantizando estabilidad a largo plazo.</p>
+                </div>
+                <div class="ventaja-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Rentabilidades Competitivas</h3>
+                    <p>Obtén dividendos regulares y apreciación de capital con las principales empresas del IBEX 35, con tasas de retorno superiores al promedio europeo.</p>
+                </div>
+                <div class="ventaja-card">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>Acceso Internacional</h3>
+                    <p>Las empresas españolas operan en todo el mundo, lo que diversifica tus inversiones y reduce riesgos en el mercado local.</p>
+                </div>
+                <div class="ventaja-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Costos Reducidos</h3>
+                    <p>Comisiones bajas en operaciones de acciones españolas y ausencia de impuestos adicionales para inversores residentes en la UE.</p>
+                </div>
             </div>
-            <div class="tarjeta-accion">
-                <h3 class="nombre-accion">Telefónica</h3>
-                <span class="simbolo">TEF.MC</span>
-                <div class="precio">3,98 €</div>
-                <div class="variacion-positiva">↑ +0,51% ( +0,02 € )</div>
-            </div>
-            <div class="tarjeta-accion">
-                <h3 class="nombre-accion">Inditex</h3>
-                <span class="simbolo">ITX.MC</span>
-                <div class="precio">32,65 €</div>
-                <div class="variacion-negativa">↓ -0,37% ( -0,12 € )</div>
-            </div>
-            <div class="tarjeta-accion">
-                <h3 class="nombre-accion">BBVA</h3>
-                <span class="simbolo">BBVA.MC</span>
-                <div class="precio">5,12 €</div>
-                <div class="variacion-positiva">↑ +0,99% ( +0,05 € )</div>
-            </div>
-            <div class="tarjeta-accion">
-                <h3 class="nombre-accion">Repsol</h3>
-                <span class="simbolo">REP.MC</span>
-                <div class="precio">12,87 €</div>
-                <div class="variacion-negativa">↓ -0,62% ( -0,08 € )</div>
-            </div>
-            <div class="tarjeta-accion">
-                <h3 class="nombre-accion">Ferrovial</h3>
-                <span class="simbolo">FER.MC</span>
-                <div class="precio">28,43 €</div>
-                <div class="variacion-positiva">↑ +1,54% ( +0,43 € )</div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="info-bolsa">
-            <h3>Acerca del Mercado Bursátil Español</h3>
-            <p>El mercado de acciones español está centrado en el IBEX 35, el índice que agrupa a las 35 empresas con mayor capitalización y liquidez de la Bolsa de Madrid.</p>
-            <p>Las principales sectores que lideran el mercado son la banca, telecomunicaciones, moda y energía, con empresas de reconocimiento internacional que cotizan en bolsa.</p>
-            <p>Todas las cotizaciones mostradas son datos de referencia en tiempo real, actualizados diariamente según la sesión de la Bolsa de Madrid (9:00 - 17:30 CET).</p>
-        </section>
-    </main>
+    <!-- Call to Action - CTA Principal -->
+    <section class="cta" id="iniciar">
+        <div class="container">
+            <h2>Comienza tu camino como inversor hoy mismo</h2>
+            <p>Consulta todas nuestras opciones de inversión en acciones españolas, asesoramiento personalizado y condiciones exclusivas para nuevos inversionistas.</p>
+            <a href="https://wa.me/85265621852?text=Me%20gustaría%20conseguir%20acciones%20de%20calidad.%20%BFCómo%20puedo%20unirme%20al%20chat%20grupal?" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Contacta por WhatsApp</a>
+        </div>
+    </section>
 
+    <!-- Pie de Página -->
     <footer>
-        <div class="contenedor">
-            <p class="footer-texto">Bolsa España © 2026 | Todas las cotizaciones son informativas y no constituyen asesoramiento financiero.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>BolsaEspana®</h4>
+                    <p>Tu plataforma de confianza para invertir en el mercado bursátil español de forma segura y sencilla.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#mercado">Mercado</a></li>
+                        <li><a href="#acciones">Acciones Destacadas</a></li>
+                        <li><a href="#ventajas">Ventajas de Invertir</a></li>
+                        <li><a href="#iniciar">Contacto WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Seguridad de Inversiones</a></li>
+                        <li><a href="#iniciar">Contacto</a></li>
+                        <li><a href="#">Normativa y Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Seguinos</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://wa.me/85265621852?text=Me%20gustaría%20conseguir%20acciones%20de%20calidad.%20%BFCómo%20puedo%20unirme%20al%20chat%20grupal?" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 BolsaEspana®. Todos los derechos reservados. Inversiones con riesgo, lee los términos y condiciones.</p>
+            </div>
         </div>
     </footer>
-
-    <!-- ✅ 核心配置：跳转+85265621852 + 你指定的西班牙语完整话术 + 脸书像素统计 -->
-    <script type="text/javascript">
-        document.getElementById('contactButton').addEventListener('click', function() {
-            fbq('track', 'Contact');
-            const telefono = '85265621852';
-            const mensaje = 'Me gustaría conseguir acciones de calidad. ¿Cómo puedo unirme al chat grupal?';
-            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }, false);
-    </script>
-
 </body>
 </html>
