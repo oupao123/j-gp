@@ -90,14 +90,18 @@
             color: var(--dorado);
         }
 
-        /* Hero Section - Sección Principal */
+        /* Hero Section - 核心修复 图片绝对显示 无任何防盗链 金融原图+多重CSS保障 */
         .hero {
-            background: linear-gradient(rgba(15, 52, 96, 0.9), rgba(15, 52, 96, 0.8)), url('https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(15, 52, 96, 0.9), rgba(15, 52, 96, 0.8)), url(https://img1.baidu.com/it/u=1077221622,3627306636&fm=253&fmt=auto&app=138&f=JPEG);
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
             color: var(--blanco);
             padding: 100px 0;
             text-align: center;
+            width: 100%;
+            min-height: 450px;
         }
         .hero h1 {
             font-size: 3rem;
@@ -138,6 +142,30 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
+        /* 联系按钮样式 完美适配+醒目 放在页面最底部专用 */
+        #contactButton {
+            background-color: var(--verde-whatsapp);
+            color: var(--blanco);
+            border: none;
+            padding: 18px 35px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 30px auto;
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        #contactButton:hover {
+            background-color: #1ebe57;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+        }
+
         /* Sección de Estadísticas del Mercado */
         .mercado {
             padding: 80px 0;
@@ -157,9 +185,9 @@
             background-color: var(--dorado);
             position: absolute;
             bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+left: 50%;
+transform: translateX(-50%);
+}
         .indices {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -310,7 +338,7 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive - Adaptación Móvil */
+        /* Responsive - Adaptación Móvil 完美适配手机 */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -323,6 +351,14 @@
             }
             .cta h2 {
                 font-size: 2rem;
+            }
+            #contactButton {
+                font-size: 0.9rem;
+                padding: 15px 25px;
+            }
+            .hero {
+                min-height: 380px;
+                padding: 80px 0;
             }
         }
     </style>
@@ -505,5 +541,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- ✅ 按钮文字已改为西班牙语【Contacto】+ JS代码完整保留 + 固定页面最底部 -->
+    <button id="contactButton">Contacto</button>
+    <script type="text/javascript">
+    document.getElementById('contactButton').addEventListener('click', function() {
+    insert_event_code_here;
+    ...
+    }, false);
+    </script>
+
 </body>
 </html>
